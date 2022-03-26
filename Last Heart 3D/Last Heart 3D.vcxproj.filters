@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GameEngine">
+      <UniqueIdentifier>{87651d54-0128-445b-b24a-be4f4623b0a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\RenderEngine">
+      <UniqueIdentifier>{66ccc91b-8640-467e-8b96-14a3083c633d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\EngineUtilities">
+      <UniqueIdentifier>{41c5b71f-68c6-4e4b-bdb4-b877dad6c932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GameObjects">
+      <UniqueIdentifier>{e7b69c7a-02b9-4395-937b-e0e19b79170a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\World">
+      <UniqueIdentifier>{623dd5cf-1b94-44ee-bfec-7e8ed52183be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{bbc4fdf5-f5c7-4f0f-8d73-39ecf6c106d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Block.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Chunk.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>GameEngine\EngineUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="EventProcessor.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="ppm.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameEngine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderEngine.cpp">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Textures.cpp">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="World.h">
+      <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderEngine.h">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ppm.h">
+      <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EventProcessor.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameEngine\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Chunk.h">
+      <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>GameEngine\EngineUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
