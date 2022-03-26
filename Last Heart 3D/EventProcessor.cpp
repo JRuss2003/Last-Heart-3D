@@ -41,6 +41,10 @@ void EventProcessor::PollEvents()
 	}
 	if (glfwGetMouseButton(Window::Get()->window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
 		Player::Get()->MineBlock();
+		
+	}
+	else {
+		threadOn = false;
 	}
 	if (glfwGetMouseButton(Window::Get()->window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
 		Player::Get()->BuildBlock();

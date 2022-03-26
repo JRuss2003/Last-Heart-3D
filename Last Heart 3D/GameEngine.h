@@ -6,7 +6,6 @@
 #include "Textures.h"
 #include "World.h"
 #include "Clock.h"
-
 class GameEngine
 {
 public:

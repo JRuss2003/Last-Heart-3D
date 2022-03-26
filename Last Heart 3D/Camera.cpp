@@ -5,7 +5,7 @@
 
 void Camera::Init()
 {
-	angleY = 0.0;
+	angleY = 2.0;
 	angle = 0.0;
 	camX = Player::Get()->x;
 	camY = Player::Get()->y;

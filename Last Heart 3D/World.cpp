@@ -88,28 +88,28 @@ void World::Update()
 void World::RemoveChunks()
 {
 	for (int x = 0; x < ChunkManager::Get()->renderVector.size(); x++) {
-		if (*&ChunkManager::Get()->renderVector[x]->x < (int)Player::Get()->x - 128 && ChunkManager::Get()->renderVector[x]->loaded == true) {
+		if (*&ChunkManager::Get()->renderVector[x]->x < (int)Player::Get()->x - 160 && ChunkManager::Get()->renderVector[x]->loaded == true) {
 			ChunkManager::Get()->renderVector[x]->Unload();
 			ChunkManager::Get()->renderVector.erase(ChunkManager::Get()->renderVector.begin() + x);
 			ChunkManager::Get()->renderVector.shrink_to_fit();
 			return;
 		}
 		
-		if (*&ChunkManager::Get()->renderVector[x]->x > (int)Player::Get()->x + 192 && ChunkManager::Get()->renderVector[x]->loaded == true) {
+		if (*&ChunkManager::Get()->renderVector[x]->x > (int)Player::Get()->x + 160 && ChunkManager::Get()->renderVector[x]->loaded == true) {
 			ChunkManager::Get()->renderVector[x]->Unload();
 			ChunkManager::Get()->renderVector.erase(ChunkManager::Get()->renderVector.begin() + x);
 			ChunkManager::Get()->renderVector.shrink_to_fit();
 			return;
 		}
 		
-		if (*&ChunkManager::Get()->renderVector[x]->z < (int)Player::Get()->z - 128 && ChunkManager::Get()->renderVector[x]->loaded == true) {
+		if (*&ChunkManager::Get()->renderVector[x]->z < (int)Player::Get()->z - 160 && ChunkManager::Get()->renderVector[x]->loaded == true) {
 			ChunkManager::Get()->renderVector[x]->Unload();
 			ChunkManager::Get()->renderVector.erase(ChunkManager::Get()->renderVector.begin() + x);
 			ChunkManager::Get()->renderVector.shrink_to_fit();
 			return;
 		}
 		
-		if (*&ChunkManager::Get()->renderVector[x]->z > (int)Player::Get()->z + 192 && ChunkManager::Get()->renderVector[x]->loaded == true) {
+		if (*&ChunkManager::Get()->renderVector[x]->z > (int)Player::Get()->z + 160 && ChunkManager::Get()->renderVector[x]->loaded == true) {
 			ChunkManager::Get()->renderVector[x]->Unload();
 			ChunkManager::Get()->renderVector.erase(ChunkManager::Get()->renderVector.begin() + x);
 			ChunkManager::Get()->renderVector.shrink_to_fit();
@@ -122,7 +122,7 @@ void World::RemoveChunks()
 void World::AddChunks()
 {
 	for (int x = 0; x < worldData.size(); x++) {
-		if (worldData[x].x > (int)Player::Get()->x - 128 && worldData[x].x < (int)Player::Get()->x + 192 && worldData[x].z >(int)Player::Get()->z - 128 && worldData[x].z < (int)Player::Get()->z + 192 && worldData[x].loaded != true) {
+		if (worldData[x].x > (int)Player::Get()->x - 160 && worldData[x].x < (int)Player::Get()->x + 160 && worldData[x].z >(int)Player::Get()->z - 160 && worldData[x].z < (int)Player::Get()->z + 160 && worldData[x].loaded != true) {
 			if (worldData[x].loaded != true && worldData[x].inLoadQue != true) {
 				if (worldData[x].x >= 64 && worldData[x].x < (WORLD_SIZE - 1) * 64 && worldData[x].z >= 64 && worldData[x].z < (WORLD_SIZE - 1) * 64 && worldData[x].peers[0] == nullptr) {
 					worldData[x].peers[0] = &worldData[(worldData[x].z / 64 - 1) * WORLD_SIZE + (worldData[x].x / 64)];

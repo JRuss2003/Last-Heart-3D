@@ -17,13 +17,6 @@ void ChunkManager::ProcessUnloadQue()
 
 void ChunkManager::ProcessLoadQue()
 {
-
-	/*
-	for (int i = 0; i < loadQue.size(); i++) {
-		loadQue[i]->Load();
-		this->renderVector.push_back(loadQue[i]);
-	}
-	*/
 	if (loadQue.size() < 1)
 		return;
 
