@@ -14,7 +14,6 @@ public:
 	void AddChunks();
 	void Render();
 	std::vector<Chunk> worldData;
-	std::vector<Chunk*> renderVector;
 	unsigned int seed;
 	
 };

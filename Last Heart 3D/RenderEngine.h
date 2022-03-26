@@ -6,6 +6,7 @@
 class RenderEngine
 {
 public:
+	void Init();
 	void BindTexture(GLuint* targetTexture);
 	void Render(Chunk* chunk);
 	GLuint LoadShaders(const char* vertex_file_path, const char* fragment_file_path);

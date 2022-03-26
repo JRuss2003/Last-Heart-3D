@@ -7,6 +7,7 @@ void GameEngine::Init(int x, int y, int width, int height)
 {
 	isRunning = true;
 	Window::Get()->Init(x, y, width, height);
+	RenderEngine::Get()->Init();
 	RenderEngine::Get()->LoadShaders("GameData/shaders/vertexshader.txt", "GameData/shaders/fragmentshader.txt");
 	glUseProgram(RenderEngine::Get()->ProgramID);
 	Textures::Get()->Load();

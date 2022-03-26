@@ -9,23 +9,17 @@ void Window::Init(int x, int y, int width, int height)
 	glfwInit();
 
 	//Init opengl
-	glfwWindowHint(GLFW_SAMPLES, 16);
+	glfwWindowHint(GLFW_SAMPLES, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	//Create window
-	window = glfwCreateWindow(width, height, "Last Heart 3D", NULL, NULL);
+	window = glfwCreateWindow(width, height, "Last Heart 3D", glfwGetPrimaryMonitor(), NULL);
 	glfwMakeContextCurrent(window);
 
-	//Init glew
-	glewExperimental = true;
-	glewInit();
 	
 	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
-	glEnable(GL_DEPTH_TEST);
-	glDepthFunc(GL_LESS);
-	glDisable(GL_MULTISAMPLE);
 	crosshairCursor = glfwCreateStandardCursor(GLFW_CROSSHAIR_CURSOR);
 	glfwSetCursor(window, crosshairCursor);
 	glfwSwapInterval(0);

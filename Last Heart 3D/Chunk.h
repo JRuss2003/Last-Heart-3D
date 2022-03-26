@@ -26,10 +26,10 @@ public:
 	GLuint elementbuffer;
 	glm::mat4 model;
 	glm::mat4 mvp;
-	bool loaded;
-	int x, z;
-	bool init;
 	GLuint VertexArrayID;
 	Chunk* peers[4];
+	int x, z;
 	bool changed;
+	bool loaded;
+	bool inLoadQue;
 };

@@ -7,13 +7,11 @@
 
 void Chunk::Init(float x, float z)
 {
-	init = true;
 	loaded = true;
 	model = glm::mat4(1.0f);
 	model = glm::translate(model, glm::vec3(x, 0.0f, z));
 	this->x = x;
 	this->z = z;
-	this->Load();
 }
 
 void Chunk::Load()

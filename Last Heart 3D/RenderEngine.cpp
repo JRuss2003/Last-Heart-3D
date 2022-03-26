@@ -5,6 +5,16 @@
 #include "GameEngine.h"
 #include <stdio.h>
 
+void RenderEngine::Init()
+{
+	//Init glew
+	glewExperimental = true;
+	glewInit();
+	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LESS);
+	glDisable(GL_MULTISAMPLE);
+}
+
 void RenderEngine::BindTexture(GLuint* targetTexture)
 {
 	glBindTexture(GL_TEXTURE_2D, *targetTexture);

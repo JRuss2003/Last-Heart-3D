@@ -66,6 +66,9 @@
     <ClCompile Include="World.cpp">
       <Filter>GameEngine\World</Filter>
     </ClCompile>
+    <ClCompile Include="ChunkManager.cpp">
+      <Filter>GameEngine\World</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="World.h">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkManager.h">
+      <Filter>GameEngine\World</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
