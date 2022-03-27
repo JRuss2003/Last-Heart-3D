@@ -351,6 +351,24 @@ void Chunk::FillUVBuffer(int x, int y, int z)
 				this->uvData.push_back(glm::vec2((uv_buffer_data[c] / 8.0) + (0.125 * 3.0), (uv_buffer_data[c + 1] / 8.0) + (0.125 * 7.0)));
 		}
 		return;
+	case CACTUS:
+		for (int c = 0; c < 72; c++) {
+			if (c % 2 == 0)
+				this->uvData.push_back(glm::vec2((uv_buffer_data[c] / 8.0) + (0.125 * 3.0), (uv_buffer_data[c + 1] / 8.0) + (0.125 * 6.0)));
+		}
+		return;
+	case LEAF:
+		for (int c = 0; c < 72; c++) {
+			if (c % 2 == 0)
+				this->uvData.push_back(glm::vec2((uv_buffer_data[c] / 8.0) + (0.125 * 4.0), (uv_buffer_data[c + 1] / 8.0) + (0.125 * 7.0)));
+		}
+		return;
+	case LOG:
+		for (int c = 0; c < 72; c++) {
+			if (c % 2 == 0)
+				this->uvData.push_back(glm::vec2((uv_buffer_data[c] / 8.0) + (0.125 * 4.0), (uv_buffer_data[c + 1] / 8.0) + (0.125 * 6.0)));
+		}
+		return;
 	default:
 		for (int c = 0; c < 72; c++) {
 			if (c % 2 == 0)

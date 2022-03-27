@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+//#include <cstdlib>
 
 //Init chunks in world.
 void World::Generate()
@@ -26,10 +27,7 @@ void World::Generate()
 			for (int z = 0; z < CHUNK_SIZE; z++) {
 				for (int x = 0; x < CHUNK_SIZE; x++) {
 					n = pn.noise((double)(x + chunk.x / 2) / (double)22, (double)(z + chunk.z / 2) / (double)22, 0.8);
-					//std::cout << n << "\n";
 					n = floor(64 * n);
-					//std::cout << n << "\n";
-					//n += 1;
 					n = n / (double)4.1 + (double)10;
 					for (int y = 0; y < CHUNK_HEIGHT; y++) {
 						if (y <= (int)n)
@@ -51,9 +49,50 @@ void World::Generate()
 							chunk.blocks[x][y][z].ID = SAND;
 						}
 						
+						if (chunk.x < 500 && chunk.blocks[x][y][z].ID != WATER && chunk.blocks[x][y][z].solid == true) {
+							chunk.blocks[x][y][z].ID = SAND;
+						}
+						
+						
 					}
 				}
 
+			}
+			for (int z = 0; z < CHUNK_SIZE; z++) {
+				for (int x = 0; x < CHUNK_SIZE; x++) {
+					for (int y = 0; y < CHUNK_HEIGHT; y++) {
+						if (rand() % 200 == 4 && chunk.x < 500 && chunk.blocks[x][y][z].ID == SAND && chunk.blocks[x][y][z].solid == true && chunk.blocks[x][y + 1][z].solid != true && y < 60) {
+								chunk.blocks[x][y + 1][z].solid = true;
+								chunk.blocks[x][y + 1][z].ID = CACTUS;
+								chunk.blocks[x][y + 2][z].solid = true;
+								chunk.blocks[x][y + 2][z].ID = CACTUS;
+								chunk.blocks[x][y + 3][z].solid = true;
+								chunk.blocks[x][y + 3][z].ID = CACTUS;
+
+
+						}
+						else if (rand() % 200 == 4 && chunk.blocks[x][y][z].ID == GRASS && chunk.blocks[x][y][z].solid == true && chunk.blocks[x][y + 1][z].solid != true && y < 50 && x > 0 && x < 31 && z > 0 && z < 31) {
+							chunk.blocks[x][y + 1][z].solid = true;
+							chunk.blocks[x][y + 1][z].ID = LOG;
+							chunk.blocks[x][y + 2][z].solid = true;
+							chunk.blocks[x][y + 2][z].ID = LOG;
+							chunk.blocks[x][y + 3][z].solid = true;
+							chunk.blocks[x][y + 3][z].ID = LOG;
+							chunk.blocks[x][y + 4][z].solid = true;
+							chunk.blocks[x][y + 4][z].ID = LOG;
+							chunk.blocks[x - 1][y + 4][z].solid = true;
+							chunk.blocks[x - 1][y + 4][z].ID = LEAF;
+							chunk.blocks[x + 1][y + 4][z].solid = true;
+							chunk.blocks[x + 1][y + 4][z].ID = LEAF;
+							chunk.blocks[x][y + 4][z - 1].solid = true;
+							chunk.blocks[x][y + 4][z - 1].ID = LEAF;
+							chunk.blocks[x][y + 4][z + 1].solid = true;
+							chunk.blocks[x][y + 4][z + 1].ID = LEAF;
+							chunk.blocks[x][y + 5][z].solid = true;
+							chunk.blocks[x][y + 5][z].ID = LEAF;
+						}
+					}
+				}
 			}
 			chunk.LoadCache();
 			worldData.push_back(chunk);
