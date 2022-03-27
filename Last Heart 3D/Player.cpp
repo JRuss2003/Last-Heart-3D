@@ -8,7 +8,7 @@ void Player::MineBlock()
 	if (Clock::Get()->TimeSinceLastAction() < 70000.0 || Clock::Get()->TimeSinceLastAction() != 0.0)
 		return;
 	targetX = this->x + 1;
-	targetY = this->y + 1;
+	targetY = this->y + 3.0;
 	targetZ = this->z + 1;
 	hasHitTarget = false;
 	for (int x = 0; x < 46; x++) {
@@ -50,7 +50,7 @@ void Player::BuildBlock()
 	if (Clock::Get()->TimeSinceLastAction() < 70000.0 || Clock::Get()->TimeSinceLastAction() != 0.0)
 		return;
 	targetX = this->x + 1;
-	targetY = this->y + 1;
+	targetY = this->y + 3.0;
 	targetZ = this->z + 1;
 	hasHitTarget = false;
 	for (int x = 0; x < 46; x++) {

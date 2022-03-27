@@ -18,7 +18,7 @@ void Camera::Init()
 void Camera::Update()
 {
 	camX = Player::Get()->x;
-	camY = Player::Get()->y;
+	camY = Player::Get()->y + 2.0;
 	camZ = Player::Get()->z;
 	Camera::Get()->Rotate();
 	view = glm::lookAt(glm::vec3(camX, camY, camZ), glm::vec3(camX + cos(angle), camY + tan(angleY), camZ + sin(angle)), glm::vec3(0.0, 1.0, 0.0));

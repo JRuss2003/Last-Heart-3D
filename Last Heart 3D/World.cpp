@@ -71,7 +71,7 @@ void World::Generate()
 
 
 						}
-						else if (rand() % 200 == 4 && chunk.blocks[x][y][z].ID == GRASS && chunk.blocks[x][y][z].solid == true && chunk.blocks[x][y + 1][z].solid != true && y < 50 && x > 0 && x < 31 && z > 0 && z < 31) {
+						else if (rand() % 10 == 4 && chunk.blocks[x][y][z].ID == GRASS && chunk.blocks[x][y][z].solid == true && chunk.blocks[x][y + 1][z].solid != true && y < 50 && x > 0 && x < 31 && z > 0 && z < 31) {
 							chunk.blocks[x][y + 1][z].solid = true;
 							chunk.blocks[x][y + 1][z].ID = LOG;
 							chunk.blocks[x][y + 2][z].solid = true;
@@ -90,6 +90,22 @@ void World::Generate()
 							chunk.blocks[x][y + 4][z + 1].ID = LEAF;
 							chunk.blocks[x][y + 5][z].solid = true;
 							chunk.blocks[x][y + 5][z].ID = LEAF;
+							chunk.blocks[x][y + 5][z - 1].solid = true;
+							chunk.blocks[x][y + 5][z - 1].ID = LEAF;
+							chunk.blocks[x][y + 5][z + 1].solid = true;
+							chunk.blocks[x][y + 5][z + 1].ID = LEAF;
+							chunk.blocks[x - 1][y + 5][z].solid = true;
+							chunk.blocks[x - 1][y + 5][z].ID = LEAF;
+							chunk.blocks[x + 1][y + 5][z].solid = true;
+							chunk.blocks[x + 1][y + 5][z].ID = LEAF;
+							chunk.blocks[x - 1][y + 4][z - 1].solid = true;
+							chunk.blocks[x - 1][y + 4][z - 1].ID = LEAF;
+							chunk.blocks[x - 1][y + 4][z + 1].solid = true;
+							chunk.blocks[x - 1][y + 4][z + 1].ID = LEAF;
+							chunk.blocks[x + 1][y + 4][z + 1].solid = true;
+							chunk.blocks[x + 1][y + 4][z + 1].ID = LEAF;
+							chunk.blocks[x + 1][y + 4][z - 1].solid = true;
+							chunk.blocks[x + 1][y + 4][z - 1].ID = LEAF;
 						}
 					}
 				}

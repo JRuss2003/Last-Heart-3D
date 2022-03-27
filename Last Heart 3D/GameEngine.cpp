@@ -17,12 +17,14 @@ void GameEngine::Init(int x, int y, int width, int height)
 	Player::Get()->z = 700;
 	Player::Get()->y = 70;
 	world.Generate();
+	Physics::Get()->physicsQue.push_back(Player::Get());
 }
 
 void GameEngine::Update()
 {
 	Clock::Get()->Tick();
 	EventProcessor::Get()->PollEvents();
+	Physics::Get()->Update();
 	Camera::Get()->Update();
 	world.Update();
 	Window::Get()->Clear();

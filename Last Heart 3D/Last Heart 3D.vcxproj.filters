@@ -19,6 +19,9 @@
     <Filter Include="Game">
       <UniqueIdentifier>{bbc4fdf5-f5c7-4f0f-8d73-39ecf6c106d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\PhysicsEngine">
+      <UniqueIdentifier>{5f6d7b26-6691-4fe8-abb4-4b3ad794bb5e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp">
@@ -69,6 +72,12 @@
     <ClCompile Include="ChunkManager.cpp">
       <Filter>GameEngine\World</Filter>
     </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>GameEngine\PhysicsEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>GameEngine\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="World.h">
@@ -115,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="ChunkManager.h">
       <Filter>GameEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>GameEngine\PhysicsEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>GameEngine\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

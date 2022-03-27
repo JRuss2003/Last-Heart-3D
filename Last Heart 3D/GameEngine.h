@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "EventProcessor.h"
 #include "RenderEngine.h"
+#include "Physics.h"
 #include "Chunk.h"
 #include "Textures.h"
 #include "World.h"
