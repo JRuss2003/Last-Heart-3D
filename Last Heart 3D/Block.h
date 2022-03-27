@@ -5,6 +5,8 @@
 #define BRICK 2
 #define WOOD 3
 #define STONE 4
+#define WATER 5
+#define SAND 6
 
 class Block
 {

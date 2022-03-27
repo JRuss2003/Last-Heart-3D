@@ -43,6 +43,13 @@ void World::Generate()
 							chunk.blocks[x][y][z].ID = DIRT;
 						else
 							chunk.blocks[x][y][z].ID = GRASS;
+						if (chunk.blocks[x][y][z].solid == false && y < 18) {
+							chunk.blocks[x][y][z].solid = true;
+							chunk.blocks[x][y][z].ID = WATER;
+						}
+						else if (chunk.blocks[x][y][z].solid == true && y == 17) {
+							chunk.blocks[x][y][z].ID = SAND;
+						}
 						
 					}
 				}

@@ -22,16 +22,16 @@ void EventProcessor::PollEvents()
 		Player::Get()->z += sin(Player::Get()->angle) * Clock::Get()->deltaTime;
 	}
 	if (glfwGetKey(Window::Get()->window, GLFW_KEY_S) == GLFW_PRESS) {
-		Player::Get()->x -= cos(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
-		Player::Get()->z -= sin(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
+		Player::Get()->x -= cos(Player::Get()->angle) * Clock::Get()->deltaTime;
+		Player::Get()->z -= sin(Player::Get()->angle) * Clock::Get()->deltaTime;
 	}
 	if (glfwGetKey(Window::Get()->window, GLFW_KEY_A) == GLFW_PRESS) {
-		Player::Get()->x += sin(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
-		Player::Get()->z -= cos(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
+		Player::Get()->x += sin(Player::Get()->angle) * Clock::Get()->deltaTime;
+		Player::Get()->z -= cos(Player::Get()->angle) * Clock::Get()->deltaTime;
 	}
 	if (glfwGetKey(Window::Get()->window, GLFW_KEY_D) == GLFW_PRESS) {
-		Player::Get()->x -= sin(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
-		Player::Get()->z += cos(Player::Get()->angle) * Clock::Get()->deltaTime * 4.0;
+		Player::Get()->x -= sin(Player::Get()->angle) * Clock::Get()->deltaTime;
+		Player::Get()->z += cos(Player::Get()->angle) * Clock::Get()->deltaTime;
 	}
 	if (glfwGetKey(Window::Get()->window, GLFW_KEY_SPACE) == GLFW_PRESS) {
 		Player::Get()->y += Clock::Get()->deltaTime * 2.0;
@@ -63,5 +63,11 @@ void EventProcessor::PollEvents()
 	}
 	if (glfwGetKey(Window::Get()->window, GLFW_KEY_4) == GLFW_PRESS) {
 		Player::Get()->blockID = STONE;
+	}
+	if (glfwGetKey(Window::Get()->window, GLFW_KEY_5) == GLFW_PRESS) {
+		Player::Get()->blockID = WATER;
+	}
+	if (glfwGetKey(Window::Get()->window, GLFW_KEY_6) == GLFW_PRESS) {
+		Player::Get()->blockID = SAND;
 	}
 }

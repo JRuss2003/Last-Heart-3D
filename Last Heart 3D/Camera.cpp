@@ -33,12 +33,12 @@ void Camera::Rotate()
 	if (ypos < prevYpos) {
 
 		if (Camera::Get()->angleY < 1.4)
-			Camera::Get()->angleY += 0.0060f * (prevYpos - ypos);
+			Camera::Get()->angleY += 0.0030 * (prevYpos - ypos);
 
 	}
 	if (ypos > prevYpos) {
 		if (Camera::Get()->angleY > -1.4)
-			Camera::Get()->angleY -= 0.0060f * (ypos - prevYpos);
+			Camera::Get()->angleY -= 0.0030 * (ypos - prevYpos);
 	}
 
 	if (xpos < prevXpos) {
